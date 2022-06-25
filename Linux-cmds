@@ -1,0 +1,10 @@
+usermod -s /sbin/nologin root   --disable root login in bash
+usermod -s /sbin/bash  root     --Enable root login in bash
+vim /etc/ssh/sshd_config        -- edit here the file  to disable root login from remote
+   PermitRootLogin no
+   DenyUser Abhishek            -- both user will be deny to loogin using ssh.
+   DenyUser tom
+   here passwordAuthentication no     -- save and restart the sshd service then try to login with root and other user, u get cannot login.
+   
+   
+   
