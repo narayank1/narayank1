@@ -94,5 +94,52 @@ how to force to the user that he must change password
 chage -d 0 user_name
 example: chage -d 0 vps
 -------------------------------------------------------------------------------------
+ What is ACL
+Access control list can be set to files and directories for read, write and executable permissions to more categories of users and groups. setfacl command can be use to assign the acl permissions and same can view by using getfacl command.
+
+  *  What is SGID and SUID
+
+SUID (Set owner User ID up on execution) is a special type of file permissions given to a file. Normally in Linux/Unix when a program runs, it inherits access permissions from the logged in user. SUID is defined as giving temporary permissions to a user to run a program/file with the permissions of the file owner rather that the user who runs it. In simple words users will get file owner’s permissions as well as owner UID and GID when executing a file/program/command.
+
+[root@server1 ~]# ls -ltr /usr/bin/passwd
+-r-sr-sr-x. 1 root root 30768 Feb 17  2012 /usr/bin/passwd
+
+The first s stands for SUID and second S stands for SGID.
+SUID can be used in such situations,
+1) Where root login is required to execute some commands/programs/scripts.
+2) Where you don’t want to give credentials of a particular user, but want to run some programs as the owner.
+3) Where you don’t want to use SUDO command, but want to give execute permission for a file/script etc.
+
+To set SUID
+[root@server1 ~]#  chmod  4555 .
+[root@server1 tmp]# ls -ltr
+-r-sr-xr-x 1 root root 0 Mar  1 23:47
+
+SGID permission is similar to the SUID permission, only difference is – when the script or command with SGID on is run,
+it runs as if it were a member of the same group in which the file is a member.
+
+[root@server1 ~]#  chmod 2555
+[root@server1 tmp]# ls -ltr
+
+ 
+-r-xr-sr-x 1 root root 0 Mar  1 23:47
+=========================================================================================
+ How we can check system performance?
+
+a)  CPU utilization  –  To check CPU performance use the following commands,
+1)  top  –  It display CPU usage, Memory usage, Swap Memory, Cache Size, Buffer Size, Process PID, User, Commands and much more
+2)  vmstat  –  To display statistics of virtual memory, kernerl threads, disks, system processes, I/O blocks, interrupts, CPU activity and much more.
+3)  lsof  –  To display list of all the open files and the processes. The open files included are disk files, network sockets, pipes, devices and processes.
+4)  tcpdump  –  A command-line network packet analyzer or packets sniffer program that is used capture or filter TCP/IP packets that received or transferred on a specific interface over a network.
+5)  netstat  –  A command line tool for monitoring incoming and outgoing network packets statistics as well as interface statistics.
+6)  iotop  –  monitor and display real time Disk I/O and processes. This tool is much useful for finding the exact process and high used disk read/writes of the processes.
+7)  iostat  –  This will collect and show system input and output storage device statistics.This tool is often used to trace storage device performance issues including devices, local disks, remote disks such as NFS.
+8)  iptraf  –   An open source console-based real time network (IP LAN) monitoring utility for Linux. It collects a variety of information such as IP traffic monitor that passes over the network, including TCP flag information, ICMP details, TCP/UDP traffic breakdowns, TCP connection packet and byne counts. It also gathers information of general and detaled interface statistics of TCP, UDP, IP, ICMP, non-IP, IP checksum errors, interface activity etc.
+9)  sar  –  Sar is part of the sysstat package. Using sar utility you can do two things: 1) Monitor system real time performance (CPU, Memory, I/O, etc) 2) Collect performance data in the background on an on-going basis and do analysis on the historical data to identify bottlenecks.
+10)  free  –  Free command displays information about the physical (RAM) and swap memory of your system.
+b)  RAM usage  –  free , cat /proc/meminfo, top, can be used to monitor memory usage.
+c)  HDD usage  –  iotop,  iostat,
+d)  buggy Software  –  Check the software logs .
+e)  Network Checking
 
     
