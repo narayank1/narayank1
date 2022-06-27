@@ -9,33 +9,7 @@ vim /etc/ssh/sshd_config        -- edit here the file  to disable root login fro
    
    
 
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@narayank1
-Vivekprakash3394 /
-linux-commands
-Public
 
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-linux-commands/usermod
-@Vivekprakash3394
-Vivekprakash3394 usermod and change permission
-Latest commit 2482026 on Jun 3, 2019
-History
-1 contributor
-39 lines (34 sloc) 1.44 KB
 how to modify the user
 
 ==>usermod -L vps (this command lock the vps user account)
@@ -75,17 +49,4 @@ chage -d 0 user_name
 example: chage -d 0 vps
 -------------------------------------------------------------------------------------
 
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
+    
