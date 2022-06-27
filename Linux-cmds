@@ -1,3 +1,35 @@
+ How to find out the linux kernel version and how to upgrade kernel ?.
+
+  To check the kernel version use any of the following command.
+# uname -a
+# uname -r
+2.6.18-348.el5
+# cat /proc/version
+Linux version 2.6.18-348.el5 (mockbuild@x86-002.build.bos.redhat.com) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-54)) #1 SMP Wed Nov 28 21:22:00 EST 2012
+To upgrade the kernel , download the kernel rpm file and install it using rpm -ivh command. Don’t use rpm -Uvh, because it will 
+upgrade the existing kernel and we won’t able to go to the previous kernel version at any point of time. If we require to remove 
+the old kernel, use rpm -e and also remove the entry form /etc/grub.conf file.
+=====================================================================================================================================
+Which are the runlevels in linux ?
+runlevel 0  –  Halt/ Shutdown .
+runlevel 1  –  Single user mode.
+runlevel 2  –  Multi user mode without network.
+runlevel 3  –  Multi user mode with network.
+runlevel 4  –  unused.
+runlevel 5  –  Graphical.
+runlevel 6  –  Reboot
+
+$ systemctl get-default                    -- To view the current target.
+$ systemctl list-units --type target --all        --To view all loaded targets (active and inactive), run:
+$ systemctl list-units --type target                --To view all currently loaded targets, run:
+$ sudo systemctl set-default runlevel3.target     ---change the RunLevel to something else
+$ sudo systemctl isolate runlevel3.target             ---change to a different target unit in the current session only
+$ man systemd          ----------For more details, refer Systemd man pages.
+
+=============================================================
+
+
+
 usermod -s /sbin/nologin root   --disable root login in bash
 usermod -s /sbin/bash  root     --Enable root login in bash
 vim /etc/ssh/sshd_config        -- edit here the file  to disable root login from remote
