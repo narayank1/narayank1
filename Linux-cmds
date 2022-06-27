@@ -130,12 +130,17 @@ a)  CPU utilization  –  To check CPU performance use the following commands,
 1)  top  –  It display CPU usage, Memory usage, Swap Memory, Cache Size, Buffer Size, Process PID, User, Commands and much more
 2)  vmstat  –  To display statistics of virtual memory, kernerl threads, disks, system processes, I/O blocks, interrupts, CPU activity and much more.
 3)  lsof  –  To display list of all the open files and the processes. The open files included are disk files, network sockets, pipes, devices and processes.
-4)  tcpdump  –  A command-line network packet analyzer or packets sniffer program that is used capture or filter TCP/IP packets that received or transferred on a specific interface over a network.
+4)  tcpdump  –  A command-line network packet analyzer or packets sniffer program that is used capture or filter TCP/IP packets that received or 
+   transferred on a specific interface over a network.
 5)  netstat  –  A command line tool for monitoring incoming and outgoing network packets statistics as well as interface statistics.
-6)  iotop  –  monitor and display real time Disk I/O and processes. This tool is much useful for finding the exact process and high used disk read/writes of the processes.
-7)  iostat  –  This will collect and show system input and output storage device statistics.This tool is often used to trace storage device performance issues including devices, local disks, remote disks such as NFS.
+6)  iotop  –  monitor and display real time Disk I/O and processes. This tool is much useful for finding the exact process and high used disk 
+ read/writes of the processes.
+7)  iostat  –  This will collect and show system input and output storage device statistics.This tool is often used to trace storage device 
+   performance issues including devices, local disks, remote disks such as NFS.
 8)  iptraf  –   An open source console-based real time network (IP LAN) monitoring utility for Linux. It collects a variety of information such as IP traffic monitor that passes over the network, including TCP flag information, ICMP details, TCP/UDP traffic breakdowns, TCP connection packet and byne counts. It also gathers information of general and detaled interface statistics of TCP, UDP, IP, ICMP, non-IP, IP checksum errors, interface activity etc.
-9)  sar  –  Sar is part of the sysstat package. Using sar utility you can do two things: 1) Monitor system real time performance (CPU, Memory, I/O, etc) 2) Collect performance data in the background on an on-going basis and do analysis on the historical data to identify bottlenecks.
+9)  sar  –  Sar is part of the sysstat package. Using sar utility you can do two things: 
+         1) Monitor system real time performance (CPU, Memory, I/O, etc) 
+         2) Collect performance data in the background on an on-going basis and do analysis on the historical data to identify bottlenecks.
 10)  free  –  Free command displays information about the physical (RAM) and swap memory of your system.
 b)  RAM usage  –  free , cat /proc/meminfo, top, can be used to monitor memory usage.
 c)  HDD usage  –  iotop,  iostat,
