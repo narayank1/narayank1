@@ -8,3 +8,84 @@ vim /etc/ssh/sshd_config        -- edit here the file  to disable root login fro
    
    
    
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@narayank1
+Vivekprakash3394 /
+linux-commands
+Public
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+
+    Insights
+
+linux-commands/usermod
+@Vivekprakash3394
+Vivekprakash3394 usermod and change permission
+Latest commit 2482026 on Jun 3, 2019
+History
+1 contributor
+39 lines (34 sloc) 1.44 KB
+how to modify the user
+
+==>usermod -L vps (this command lock the vps user account)
+==>usermod -U vps (to unlock the user account)
+-----------------------------------------------------------------
+rename the group name
+==> groupmod -n new_name old_name
+example: groupmod -n sales production_team
+-----------------------------------------------------------------
+how to change the group id 
+gruopmod -g 5000 sales
+where the 5000 is the new group id
+-----------------------------------------------------------------
+how to change primary group of the user
+==>usermod -g group_name user_name
+-----------------------------------------------------------------
+how to add suplimentry group to the user
+usermod -G group_name user_name
+example: usermod -G production_team vps
+now you can check the info by using id vps
+-----------------------------------------------------------------
+
+[root@vps vps]# useradd vps1
+[root@vps vps]# cat /etc/passwd | grep vps1
+vps1:x:1002:1003::/home/vps1:/bin/bash
+[root@vps vps]# id vps1
+uid=1002(vps1) gid=1003(vps1) groups=1003(vps1)
+[root@vps vps]# groupadd IT
+[root@vps vps]# usermod -G IT vps1
+[root@vps vps]# id vps1
+uid=1002(vps1) gid=1003(vps1) groups=1003(vps1),1004(IT)
+
+-------------------------------------------------------------------------------------
+how to force to the user that he must change password
+
+chage -d 0 user_name
+example: chage -d 0 vps
+-------------------------------------------------------------------------------------
+
+    © 2022 GitHub, Inc.
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
