@@ -17,9 +17,47 @@ Firewall Commands--
 2- iptables -t filter --delete INPUT 2                ----This command deletes the rule 2 from INPUT chain
 3- iptables -t filter --check INPUT -s 192.168.1.123 -j DROP------This command checks whether the specified rule is present in the INPUT chain.
 4- iptables -t filter -A INPUT -p udp -j DROP           -----This command appends a rule in the INPUT chain to drop all udp packets.
+5. # iptables -A INPUT -s xxx.xxx.xxx.xxx -j DROP       ------Block Specific IP Address in IPtables Firewall
+
+=========================15 basic useful firewall-cmd commands in Linux=================================
+    $ sudo yum update -y
+
+Note:
+Firewalld will be available on all the base installations of CentOS 7 but not on minimal installation, in that case, we can use th
+following command to install:
+
+    $ sudo yum install firewalld -y
+
+Use the following commands to start and enable the service
+
+    $ sudo systemctl start firewalld.service
+    $ sudo systemctl enable firewalld.service
+
+You can verify the status of the firewall service by using the following commands:
+
+    $ sudo firewall-cmd --state
+    Output:   
+    running
+
+    $ sudo systemctl status firewalld
+    Detailed output:
+    firewalld.service - firewalld - dynamic firewall daemon
+    Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled)
+    Active: active (running) since Sat 2020-04-18 22:39:56 IST; 2h 52min ago
+    
+    1.  $ sudo firewall-cmd --get-zones             -----------to check all the available zones in firewalld.
+    2.  $ firewall-cmd --get-default-zone           -----------to find out which is the default zone.
+    3. $ firewall-cmd --get-active-zones            ---------- to find a list of active zones and associated network interfaces?
+    4. $ sudo firewall-cmd --list-all --zone="public"   ---------How to find out if there are any rules listed in the active public zone?
+
+    
 
 
 
+
+
+
+   
 
 
 
