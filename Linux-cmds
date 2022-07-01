@@ -9,6 +9,20 @@
     Basic knowledge of networking on the server side
     Experience with Change management
     Good knowledge on VMWARE
+==============================================================================
+Firewall Commands--
+
+  iptables -L --line-number
+1- iptables -t filter --append INPUT -j DROP          ----This command drops all the traffic coming on any port.
+2- iptables -t filter --delete INPUT 2                ----This command deletes the rule 2 from INPUT chain
+3- iptables -t filter --check INPUT -s 192.168.1.123 -j DROP------This command checks whether the specified rule is present in the INPUT chain.
+4- iptables -t filter -A INPUT -p udp -j DROP           -----This command appends a rule in the INPUT chain to drop all udp packets.
+
+
+
+
+
+
 
  
  ===========================================================================
