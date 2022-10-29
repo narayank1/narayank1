@@ -1,14 +1,13 @@
- Must have:
+Troubleshooting part:-
+Q-  One user called and said loging is no longer connect to the server.
+A- Login to server by root.
+   #lastlog -u john
+   #getent passwd john ----here you will see the /bin/shell 
+   #chsh -s /bin/bash/ john
+   now try to login you able to login
+Q- 
+   
 
-    3+ years of experience on working with Linux and Solaris
-    Good knowledge and experience with Troubleshooting of OS issues
-    Experience with Patching the UNIX operating systems
-    Experience on DNS, FTP, SFTP, Samba
-    User and access management
-    Experience with different file systems and volume managers
-    Basic knowledge of networking on the server side
-    Experience with Change management
-    Good knowledge on VMWARE
 ==============================================================================
 Firewall Commands--
 
