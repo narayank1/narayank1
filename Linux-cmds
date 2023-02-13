@@ -13,7 +13,10 @@ A- In /etc/pam.d/   one file in which we can set the password plicy in linux.
     D= dcredit=-1  ---one digit
     O= ocredit=-1  ---one special character 
     
- Q- 
+ Q- How to set host name in rhel7 on cli.
+ A- hostnamectl set-hostname gitserver
+    bash
+    
    
 
 ==============================================================================
