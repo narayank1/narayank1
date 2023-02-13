@@ -5,7 +5,15 @@ A- Login to server by root.
    #getent passwd john ----here you will see the /bin/shell 
    #chsh -s /bin/bash/ john
    now try to login you able to login
-Q- 
+Q- where we can set password policy in linux.
+A- In /etc/pam.d/   one file in which we can set the password plicy in linux.
+    LUDO is the sort name for set password policy.
+    L= lcredit=-1  ---one lowercase
+    U= ucredit=-1  ---one uppercase
+    D= dcredit=-1  ---one digit
+    O= ocredit=-1  ---one special character 
+    
+ Q- 
    
 
 ==============================================================================
